@@ -1,0 +1,69 @@
+---
+Type:
+  - Page
+aliases:
+  - Image-Based Lighting
+  - 基于图像的照明
+tags: 
+Status:
+modifiedDate: 星期三, 六月 4日 2025, 8:40:31 晚上
+---
+
+## 定义
+
+使用HDR 全景图或 [CubeMap](CubeMap.md) 作为光源, 模拟间接光照, 包括漫反射, 镜面反射, 环境光等
+
+## 实现
+
+### 预计算阶段(离线或加载时)
+
+对输入的 HDR 环境贴图进行处理，生成用于漫反射和镜面反射的预计算数据。
+
+#### 环境贴图的加载与转换
+
+- **输入：** 通常是 HDR (High Dynamic Range) 全景图（如 `.hdr` 或 `.exr` 文件），可以捕捉真实世界的亮度信息。
+- **转换：** 将全景图转换为**立方体贴图 (Cubemap)**。立方体贴图更适合在 GPU 上进行采样，因为它避免了全景图在两极的畸变，并且提供了方便的方向采样。
+
+#### 漫反射 Irradiance Map
+
+1. 创建一个低分辨率的立方体贴图（例如 32x32 或 64x64）。
+2. 对于新立方体贴图的每个像素（对应一个法线方向 `n`），以该法线为半球中心，对原始 HDR 立方体贴图进行**半球积分**。这个积分使用**余弦加权采样**（Cosine-weighted sampling），模拟 Lambertian 漫反射。
+
+#### 镜面反射 IBL
+
+- **原理：** 镜面反射光照依赖于表面法线、粗糙度和观察方向。对于越粗糙的表面，高光越模糊，需要从更广阔的区域收集光线。这意味着，我们需要一张考虑了**不同粗糙度级别模糊程度**的环境贴图。
+- **实现：**
+    1. 创建一个多级渐远纹理 (Mipmap) 的立方体贴图。原始环境贴图是最高级别（Mip Level 0）。
+    2. 对于每个 Mip Level，我们使用原始 HDR 立方体贴图进行**重要性采样 (Importance Sampling)**。
+    3. **核心：** 采样时，**根据当前 Mip Level 对应的粗糙度值**（例如，Mip Level 0 对应 roughness = 0.0，Mip Level 最高级对应 roughness = 1.0），生成一个符合 GGX 或其他微平面法线分布函数的**重要性采样分布**。
+    4. 从这个分布中采样光线方向，并对这些方向上的原始环境光进行加权平均。
+- **结果：** 得到一张**预过滤环境贴图 (Pre-filtered Environment Map)**。这张图的 Mip Level 越低（越接近原始图），光照越清晰；Mip Level 越高（越模糊），则模拟了越粗糙表面的反射效果。
+
+#### LUT BRDF 积分图 (BRDF Integration Map )
+
+>  ⭐**重要假设: 积分可分离**
+
+- **原理：** PBR 的镜面反射项通常由菲涅尔效应 `F`、法线分布函数 `D` 和几何遮蔽 `G` 组成。在镜面反射积分中，`F` 和 `G` 项与光照无关，只依赖于**粗糙度**和**光线/观察方向**（或等效于法线与观察方向的夹角）。
+- **实现：**
+    1. 创建一个 2D 查找表 (Look-Up Table, LUT)，通常是 512x512 像素的纹理。
+    2. LUT 的 x 轴表示**NdotV** (法线与观察方向的点积，或粗糙度)，y 轴表示**粗糙度**。![](assets/Pasted%20image%2020250526194133.png)
+- **结果：** 得到一张名为 **BRDF 积分图 (BRDF Integration Map)** 的 2D 纹理。
+
+### 运行时计算
+
+**a. 漫反射 IBL 计算：**
+
+- **在片段着色器中：**
+    1. 获取片段的**世界空间法线 `N`**。
+    2. 使用 `N` 作为采样方向，采样**辐照度图 (Irradiance Map)**。
+    3. 将采样结果作为漫反射项的入射光颜色 `$L_i$`。
+    4. 结合材质的 `BaseColor` (Albedo) 和 `metallic` 属性（非金属材质的漫反射）来计算最终的漫反射贡献。
+**b. 镜面反射 IBL 计算：**
+- **在片段着色器中：**
+    1. 获取片段的**世界空间法线 `N`**、**观察方向 `V`** 和**粗糙度 `roughness`**。
+    2. 计算反射向量 `R = reflect(-V, N)`。
+    3. 使用 `R` 作为采样方向，并使用 `roughness` 来选择合适的 Mip Level，采样**预过滤环境贴图 (Pre-filtered Environment Map)**。`textureLod` 或 `textureGrad` 可以用来指定 Mip Level。
+    4. 计算 `NdotV` (法线与观察方向的点积)。
+    5. 使用 `NdotV` 和 `roughness` 作为 UV 坐标，采样**BRDF 积分图 (BRDF Integration Map)**，得到一个 `vec2` 值（通常是 `scale` 和 `bias`）。
+    6. 结合材质的 `BaseColor`、`metallic`（金属材质的菲涅尔 F0）、`roughness` 和采样得到的 `scale`、`bias`，计算最终的镜面反射贡献。
+    - **一般公式形式：** `SpecularIBL = prefilteredColor * (F0 * scale + bias)`。
