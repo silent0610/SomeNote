@@ -4,7 +4,7 @@ aliases:
   - Bounding Volume Hierarchy
   - 层次包围盒
 tags: 
-modifiedDate: 星期四, 六月 5日 2025, 8:36:30 晚上
+modifiedDate: 星期四, 六月 5日 2025, 8:45:51 晚上
 ---
 
 # BVH
@@ -15,7 +15,7 @@ modifiedDate: 星期四, 六月 5日 2025, 8:36:30 晚上
 
 ## 构造
 
-通常通过 [[Compute Shader]] 并行构造
+通常通过 [Compute Shader](Compute%20Shader.md) 并行构造
 
 ### 自顶向下
 
