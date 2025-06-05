@@ -4,7 +4,7 @@ Type:
 aliases: 
 tags: 
 Status: 
-modifiedDate: 星期四, 五月 29日 2025, 4:25:58 下午
+modifiedDate: 星期四, 六月 5日 2025, 3:35:21 下午
 ---
 Cook-Torrance 是一个[局部着色模型](局部着色模型.md)
 
