@@ -1,10 +1,13 @@
 ---
 Type:
   - Page
-aliases: 
+aliases:
+  - 透明度缓冲？
 tags: 
-modifiedDate: 星期二, 六月 3日 2025, 10:29:32 晚上
+modifiedDate: 2025/06/23, 19:57:59
 ---
+
+# A-Buffer
 
 ## 原理
 

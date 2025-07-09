@@ -2,11 +2,12 @@
 Type:
   - Page
 aliases: 
+tags: []
 Status: 
-tags:
-  - 经验
-modifiedDate: 星期一, 五月 26日 2025, 8:22:13 晚上
+modifiedDate: 2025/06/12, 16:29:37
 ---
+
+# Linux
 
 [一文教你快速修改ubuntu终端显示的主机名和用户名 - 小麦大叔 - 博客园 (cnblogs.com)](https://www.cnblogs.com/unclemac/p/12783332.html)
 [bash-如何在Linux命令行提示符下显示主机名-Unix和Linux堆栈交换 --- bash - How to show the host name in Linux commandline prompt - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/218174/how-to-show-the-host-name-in-linux-commandline-prompt)

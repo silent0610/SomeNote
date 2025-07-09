@@ -4,8 +4,11 @@ Type:
 aliases: 
 tags:
   - 渲染器实现细节
-modifiedDate: 星期三, 六月 4日 2025, 2:42:14 下午
+modifiedDate: 2025/06/25, 22:05:25
 ---
+
+# SSAO硬渲染器内实现
+
 一个完整的 pass
 
 ## CPU 端

@@ -3,8 +3,11 @@ Type:
   - Page
 aliases: 
 tags: 
-modifiedDate: 星期六, 五月 31日 2025, 1:27:35 下午
+modifiedDate: 2025/06/13, 21:29:19
 ---
+
+# CPP继承与派生
+
 [C++的三种继承方式:public,protected,private - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/356580826)
 基类的private 成员在子类中无论如何都无法直接访问（通过基类public函数（非private继承）间接访问应该可以）
 ***注意区分对象，和类内。***

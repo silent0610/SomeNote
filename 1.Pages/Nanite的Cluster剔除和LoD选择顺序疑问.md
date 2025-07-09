@@ -4,8 +4,11 @@ Type:
 aliases: 
 tags: 
 Status: 
-modifiedDate: 星期四, 五月 29日 2025, 2:02:23 下午
+modifiedDate: 2025/07/05, 18:03:46
 ---
+
+# Nanite的Cluster剔除和LoD选择顺序疑问
+
 首先, 他们肯定都有一个 BVH 结构
 应该是这样吗
 根节点, 存储整个模型的 包围盒

@@ -5,8 +5,11 @@ aliases:
   - 反转 Z 缓冲
   - Inverted Z-Buffer
 tags: 
-modifiedDate: 星期六, 五月 31日 2025, 1:28:03 下午
+modifiedDate: 2025/06/19, 15:26:42
 ---
+
+# Inversed-Z
+
 传统的深度缓冲通常将 0.0 表示近裁剪面，1.0 表示远裁剪面
 
 - 但是, 浮点数在接近 0 的精度要高于接近 1 的精度。

@@ -1,11 +1,14 @@
 ---
 Type:
   - Page
-aliases: 
+aliases:
+  - 可见性缓冲
 tags: 
 Status: 
-modifiedDate: 星期四, 六月 5日 2025, 10:15:24 上午
+modifiedDate: 2025/07/06, 23:49:20
 ---
+
+# Visibility Buffer
 
 | 特性    | 前向渲染 (Forward) | 延迟着色 (Deferred)   | 可见性缓冲区 (Visibility Buffer)       |
 | ----- | -------------- | ----------------- | -------------------------------- |

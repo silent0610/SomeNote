@@ -3,8 +3,11 @@ Type:
 aliases:
   - Halton Sequence
 tags: 
-modifiedDate: 星期三, 六月 4日 2025, 6:56:04 晚上
+modifiedDate: 2025/06/24, 16:27:01
 ---
+
+# Halton 序列
+
 和[蓝噪声](Blue%20Noise.md)的目的类似, 都是尽可能均匀的
 Halton 序列是一种确定性的**低差异序列 (Low-Discrepancy Sequence, LDS)**，也被称为**准随机序列 (Quasi-Random Sequence)**。
 - **确定性**：给定起始索引，生成的序列是完全可预测和可重复的。每次运行程序都能得到完全相同的序列，这对于调试和结果复现非常有利。

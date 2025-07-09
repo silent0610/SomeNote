@@ -2,11 +2,12 @@
 Type:
   - Page
 aliases: 
+tags: []
 Status: 
-tags:
-  - 经验
-modifiedDate: 星期一, 五月 26日 2025, 8:24:21 晚上
+modifiedDate: 2025/06/12, 16:29:38
 ---
+
+# Pip配置
 
 ## Pip 换源
 

@@ -2,12 +2,13 @@
 Type:
   - Page
 aliases: 
+tags: []
 Status:
   - archive
-tags:
-  - 经验
-modifiedDate: 星期一, 五月 26日 2025, 8:23:29 晚上
+modifiedDate: 2025/06/12, 16:29:36
 ---
+
+# Obsidian文件思路
 
 [经验](经验.md)
 

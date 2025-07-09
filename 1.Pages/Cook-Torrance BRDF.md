@@ -4,8 +4,11 @@ Type:
 aliases: 
 tags: 
 Status: 
-modifiedDate: 星期四, 六月 5日 2025, 3:35:21 下午
+modifiedDate: 2025/06/20, 17:37:11
 ---
+
+# Cook-Torrance BRDF
+
 Cook-Torrance 是一个[局部着色模型](局部着色模型.md)
 
 ## 核心公式

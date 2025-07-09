@@ -3,9 +3,12 @@ Type:
   - Page
 aliases:
   - 深度预通道
+  - Pre-Z
 tags: 
-modifiedDate: 星期六, 五月 31日 2025, 1:28:21 下午
+modifiedDate: 2025/06/19, 15:33:26
 ---
+
+# Z-Prepass
 
 ## 原理
 

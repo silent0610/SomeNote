@@ -3,12 +3,15 @@ Type:
 aliases:
   - 绘制调用
 tags: 
-modifiedDate: 星期四, 六月 5日 2025, 11:04:36 上午
+modifiedDate: 2025/06/29, 20:57:00
 ---
+
+# Draw Call
 
 ## 定义
 
 绘制调用是 CPU 向 GPU 发送的一个命令，告诉 GPU 去渲染一组图元（如三角形、直线、点），这些图元通常来自一个顶点缓冲区和一个索引缓冲区。
+- 这个命令本身包含了很多信息，比如要绘制的顶点数据、使用的纹理、着色器（Shader）以及渲染状态（如混合模式、深度测试等）。
 
 ## 开销
 
@@ -25,7 +28,7 @@ modifiedDate: 星期四, 六月 5日 2025, 11:04:36 上午
 
 ## 优化
 
--  [[批处理]]
+- [[批处理]]
 - [[实例化]]
 - [Culling](Culling.md)
 - [GPU Driven Pipeline](GPU%20Driven%20Pipeline.md)

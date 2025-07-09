@@ -3,8 +3,10 @@ Type:
 aliases:
   - 泛光
 tags: 
-modifiedDate: 星期四, 六月 5日 2025, 2:08:41 下午
+modifiedDate: 2025/06/25, 18:36:15
 ---
+
+# Bloom
 
 ## 目的
 

@@ -5,8 +5,11 @@ aliases:
   - Subpixel Morphological Anti-Aliasing
   - 子像素增强抗锯齿
 tags: 
-modifiedDate: 星期三, 六月 4日 2025, 5:04:10 下午
+modifiedDate: 2025/06/24, 15:36:41
 ---
+
+# SMAA
+
 基于形态学的抗锯齿方法, 只使用了颜色缓冲
 
 ## 原理

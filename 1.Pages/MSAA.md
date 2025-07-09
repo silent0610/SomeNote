@@ -3,8 +3,11 @@ Type:
   - Page
 aliases: 
 tags: 
-modifiedDate: 星期三, 六月 4日 2025, 7:24:22 晚上
+modifiedDate: 2025/06/24, 15:17:31
 ---
+
+# MSAA
+
 相比于 [SSAA](SSAA.md) 它同样需要保存 N (和之前的 N 倍分辨率不一样)个样本的 color 和 zbuffer
 所以
 - 增加 N 倍带宽需求

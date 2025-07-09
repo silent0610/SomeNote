@@ -3,8 +3,10 @@ Type:
   - Page
 aliases: 
 tags: 
-modifiedDate: 星期六, 五月 31日 2025, 1:27:49 下午
+modifiedDate: 2025/06/19, 14:46:04
 ---
+
+# Early-Z
 
 ## 定义
 
@@ -13,6 +15,19 @@ modifiedDate: 星期六, 五月 31日 2025, 1:27:49 下午
 ## 目标
 
 减少 overDraw
+
+## 得失
+
+### 优点
+
+- 减少像素着色器调用, 减少 overDraw, 提高性能
+
+### 缺点
+
+需要保证深度是正确的, 所以
+- 如果在像素着色器中存在对片元深度的修改, 或者 discard(alpha test),又或者其它的模板测试
+- 那么通常无法使用 early-z
+- vulkan 中 early z 是默认开启的
 
 ## 工作原理
 

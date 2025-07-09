@@ -3,14 +3,16 @@ Type:
   - Page
 aliases: 
 tags: 
-modifiedDate: 星期六, 五月 31日 2025, 1:25:27 下午
+modifiedDate: 2025/06/16, 19:06:22
 ---
+
+# weak_ptr
 
 ## 定义
 
 是为了配合 `std::shared_ptr` 工作而设计的，它提供了一种**安全的、非拥有式的**方式来观察由 `shared_ptr` 管理的对象。普通指针则不具备这些内建的安全性和与 `shared_ptr` 系统的集成特性。
 
-是一种弱引用，它指向由 [shared\_ptr](shared_ptr.md) 管理的对象，但**不改变对象的强引用计数**, 也就**不阻止资源释放**。
+是一种弱引用，它指向由 [shared\_ptr](C++shared_ptr.md) 管理的对象，但**不改变对象的强引用计数**, 也就**不阻止资源释放**。
 
 ## 实现
 

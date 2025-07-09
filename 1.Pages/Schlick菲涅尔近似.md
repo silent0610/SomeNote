@@ -4,10 +4,12 @@ Type:
 aliases:
   - Schlick近似
 tags: 
-modifiedDate: 星期四, 五月 29日 2025, 2:45:15 下午
+modifiedDate: 2025/06/20, 17:43:56
 ---
 
-## 原始方程
+# Schlick菲涅尔近似
+
+## 近似方程
 
 $$
 F(\mathbf{n}, \mathbf{l}) \approx F_0+\left(1-F_0\right)\left(1-(\mathbf{n} \cdot \mathbf{l})^{+}\right)^5

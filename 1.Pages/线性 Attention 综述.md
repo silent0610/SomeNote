@@ -2,10 +2,12 @@
 Type:
   - Project
 aliases: 
-Status: 
 tags: 
-modifiedDate: 星期一, 五月 26日 2025, 8:44:19 晚上
+Status: 
+modifiedDate: 2025/06/11, 11:28:22
 ---
+
+# 线性 Attention 综述
 
 [线性注意力综述正文](线性注意力综述正文.md)
 

@@ -5,8 +5,10 @@ aliases:
   - 间接绘制调用
 tags: 
 Status: 
-modifiedDate: 星期四, 六月 5日 2025, 10:27:15 上午
+modifiedDate: 2025/06/17, 15:18:09
 ---
+
+# Indirect Draw Call
 
 ## 定义
 

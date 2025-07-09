@@ -4,8 +4,11 @@ aliases:
   - 快速近似抗锯齿
   - fast approximate antialiasing
 tags: 
-modifiedDate: 星期三, 六月 4日 2025, 4:57:54 下午
+modifiedDate: 2025/06/24, 15:36:49
 ---
+
+# FXAA
+
 基于形态学的抗锯齿方法, 只使用了颜色缓冲
 
 ## 原理

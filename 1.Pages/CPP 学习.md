@@ -1,20 +1,33 @@
 ---
 Type:
   - Page
-aliases: 
-tags:
-Status: []
-modifiedDate: 星期一, 五月 26日 2025, 2:59:20 下午
+aliases:
+  - C++ 学习
+tags: 
+Status: 
+modifiedDate: 2025/06/17, 10:28:43
 ---
+
+# CPP 学习
+
+[[CPP 面经|C++面经]]
+
+## 教科书
+
 [[C++ Primer]]  
 [[Effective C++]]  
 [[More Effective C++]]  
 [[Effective Modern  C++]]  
 [[C++ Core Guidelines]]
 
-## 编译
+## 构建
 
 [[XMake]]  
-[[CMake]]  
+[[CMake]]
+
+## 编译器
+
+[[GCC]]
 [[MSVC]]  
 [[Clang]]
+[[ClangFormat]]

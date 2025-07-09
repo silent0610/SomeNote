@@ -2,11 +2,12 @@
 Type:
   - Page
 aliases: 
+tags: []
 Status: 
-tags:
-  - 经验
-modifiedDate: 星期三, 五月 28日 2025, 11:01:48 上午
+modifiedDate: 2025/06/12, 16:29:33
 ---
+
+# 快速打开或关闭sql Server 服务
 
 bat文件
 

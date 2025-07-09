@@ -8,16 +8,19 @@ aliases:
   - 层次Z缓冲
 tags: 
 Status: 
-modifiedDate: 星期四, 五月 29日 2025, 1:58:45 下午
+modifiedDate: 2025/06/19, 15:34:34
 ---
+
+# Hi-Z
 
 ## 定义
 
 - 一种 Z-buffer 技术
-- 层级的 Z-Buffer, 和 [[MipMap]] 和 [Cascade Shadow Map](Cascade%20Shadow%20Map.md) 等金字塔十分相似
+- 层级的 Z-Buffer, 和 [[MipMap]] 和 [级联阴影贴图](级联阴影贴图.md) 等金字塔十分相似
 
 ### 核心思想
 
+- [[MipMap]]
 - 上层的 Z 是下层区域 Z 的最大值 **(即最远可见点)**, 如果一个某个物体的深度比上层最大值还大 **(即比当前区域最远可见点还远)**, 则说明一定会被遮挡 **(其它位置都比它近)**, 无需计算, 否则计算下一层
 
 ## 细节

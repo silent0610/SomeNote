@@ -5,8 +5,10 @@ aliases:
   - 百分比接近软阴影
   - percentage-closer soft shadows
 tags: 
-modifiedDate: 星期二, 六月 3日 2025, 10:28:26 晚上
+modifiedDate: 2025/06/25, 11:21:05
 ---
+
+# PCSS
 
 ## 定义
 

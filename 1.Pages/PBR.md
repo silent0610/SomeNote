@@ -6,8 +6,10 @@ aliases:
   - Physically Based Rendering
 tags: 
 Status:
-modifiedDate: 星期四, 五月 29日 2025, 2:06:37 下午
+modifiedDate: 星期六, 六月 7日 2025, 4:42:01 下午
 ---
+
+# PBR
 
 ## 定义
 

@@ -5,8 +5,11 @@ aliases:
   - Endity Component System
   - 实体组件系统
 tags: []
-modifiedDate: 星期一, 五月 26日 2025, 2:52:09 下午
+modifiedDate: 2025/06/18, 13:55:07
 ---
+
+# ECS
+
 [游戏引擎岗面经](游戏引擎岗面经.md)
 
 ## 简介

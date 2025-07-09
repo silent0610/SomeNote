@@ -6,8 +6,10 @@ aliases:
   - Bidirectional Reflectance Distribution Function
 tags: 
 Status:
-modifiedDate: 星期三, 六月 4日 2025, 10:09:25 晚上
+modifiedDate: 2025/06/20, 17:18:30
 ---
+
+# BRDF
 
 ## 定义
 

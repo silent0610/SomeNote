@@ -2,11 +2,13 @@
 Type:
   - Page
 aliases: 
+tags: []
 Status: 
-tags:
-  - 经验
-modifiedDate: 星期一, 五月 26日 2025, 8:22:33 晚上
+modifiedDate: 2025/06/12, 16:29:34
 ---
+
+# Git简单操作指南
+
 [经验](经验.md)
 [Git](Git.md)
 

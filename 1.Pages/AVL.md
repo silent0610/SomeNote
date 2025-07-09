@@ -1,16 +1,16 @@
 ---
 Type:
   - Page
-aliases:
-  - Self-Balancing Binary Search Tree
-  - 自平衡二叉搜索树
+aliases: []
 tags: 
-modifiedDate: 星期六, 五月 31日 2025, 1:26:52 下午
+modifiedDate: 2025/06/16, 10:21:03
 ---
+
+# AVL
 
 ## 定义
 
-一种[二叉搜索树](二叉搜索树.md)
+一种[二叉搜索树](二叉搜索树.md),是[[自平衡二叉搜索树]]的一种实现
 
 ## 特点
 

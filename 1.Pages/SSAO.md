@@ -4,8 +4,11 @@ aliases:
   - 屏幕空间环境光遮蔽
   - Screen Space Ambient Occlusion
 tags: 
-modifiedDate: 星期三, 六月 4日 2025, 2:33:40 下午
+modifiedDate: 2025/06/27, 14:50:04
 ---
+
+# SSAO
+
 [AO](AO.md)
 
 ## 核心
@@ -16,7 +19,7 @@ modifiedDate: 星期三, 六月 4日 2025, 2:33:40 下午
 ## 步骤
 
 - 获取当前像素点信息
-- 在半球内随机采样(核)
+- 在法线半球内随机采样(核)
     - 同时使用噪声扰动
 - 对每个采样点进行遮挡测试
     - 像素点

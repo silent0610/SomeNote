@@ -4,9 +4,13 @@ Type:
 aliases:
   - Super-Sampling Anti-Aliasing
   - 超采样抗锯齿
+  - full-scene antialiasing
+  - FSAA
 tags: 
-modifiedDate: 星期三, 六月 4日 2025, 4:08:19 下午
+modifiedDate: 2025/06/24, 15:11:38
 ---
+
+# SSAA
 
 ## 核心
 

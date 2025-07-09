@@ -7,8 +7,11 @@ aliases:
   - NRVO
   - Named Return Value Optimization
 tags: 
-modifiedDate: 星期二, 六月 3日 2025, 7:07:53 晚上
+modifiedDate: 2025/06/14, 14:03:42
 ---
+
+# RVO
+
 C++ 编译器通常会执行返回值优化
 
 > 在 C++17 之后，某些情况下的拷贝省略（包括返回匿名临时对象）是**强制**
